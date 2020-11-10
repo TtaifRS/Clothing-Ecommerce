@@ -17,28 +17,33 @@ export default class DirectoryMenu extends Component {
           title: "HATS",
           image: Hat,
           id: 1,
+          linkUrl: "hats",
         },
         {
           title: "JACKETS",
           image: Jacket,
           id: 2,
+          linkUrl: "jackets",
         },
         {
           title: "SHOES",
           image: Shoe,
           id: 3,
+          linkUrl: "shoes",
         },
         {
           title: "WOMENS",
           image: Women,
           id: 4,
           size: "large",
+          linkUrl: "womens",
         },
         {
           title: "MENS",
           image: Men,
           id: 5,
           size: "large",
+          linkUrl: "mens",
         },
       ],
     };
@@ -46,8 +51,8 @@ export default class DirectoryMenu extends Component {
   render() {
     return (
       <div className="directory-menu">
-        {this.state.sections.map(({ title, image, id, size }) => (
-          <MenuItem key={id} title={title} image={image} size={size} />
+        {this.state.sections.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
         ))}
       </div>
     );
