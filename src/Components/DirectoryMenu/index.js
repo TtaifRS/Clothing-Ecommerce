@@ -26,10 +26,10 @@ export default class DirectoryMenu extends Component {
           linkUrl: "jackets",
         },
         {
-          title: "SHOES",
+          title: "SNEAKERS",
           image: Shoe,
           id: 3,
-          linkUrl: "shoes",
+          linkUrl: "sneakers",
         },
         {
           title: "WOMENS",
