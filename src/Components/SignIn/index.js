@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { signInWithGoogle } from "../../utils/firebase";
+import { FcGoogle } from "react-icons/fc";
+import { IconContext } from "react-icons";
 import CustomButton from "../CustomButton";
 import FormInput from "../FormInput";
 import "./SignIn.scss";
@@ -49,7 +52,23 @@ export default class SignIn extends Component {
             label="password"
           />
 
-          <CustomButton type="submit">Sign In</CustomButton>
+          <div className="buttons">
+            <CustomButton type="submit">Sign In</CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              Sign In with
+              <IconContext.Provider
+                value={{
+                  style: {
+                    verticalAlign: "middle",
+                    padding: "0 3px",
+                  },
+                  size: "28px",
+                }}
+              >
+                <FcGoogle />
+              </IconContext.Provider>
+            </CustomButton>
+          </div>
         </form>
       </div>
     );

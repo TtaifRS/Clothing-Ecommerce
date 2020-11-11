@@ -23,4 +23,16 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     transition: all 0.5s ease-in-out;
   }
+
+  &.google-sign-in {
+    background-color: #3b01a3;
+    color: white;
+    border: 1px solid black;
+
+    &:hover {
+      background-color: white;
+      color: #3b01a3;
+      border: none;
+    }
+  }
 }
