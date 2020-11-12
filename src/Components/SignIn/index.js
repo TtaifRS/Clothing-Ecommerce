@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { signInWithGoogle } from "../../utils/firebase";
 import { FcGoogle } from "react-icons/fc";
 import { IconContext } from "react-icons";
 import CustomButton from "../CustomButton";
 import FormInput from "../FormInput";
 import "./SignIn.scss";
+
+import { auth } from "../../utils/firebase";
 
 export default class SignIn extends Component {
   constructor() {
@@ -15,9 +19,16 @@ export default class SignIn extends Component {
     };
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
-    this.setState({ email: "", password: "" });
+    const { email, password } = this.state;
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: "", password: "" });
+    } catch (error) {
+      toast.error("Email and password didn't match", error);
+    }
   };
 
   handleChange = (e) => {
@@ -70,6 +81,7 @@ export default class SignIn extends Component {
             </CustomButton>
           </div>
         </form>
+        <ToastContainer />
       </div>
     );
   }
