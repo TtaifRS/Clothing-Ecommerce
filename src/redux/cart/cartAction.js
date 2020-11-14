@@ -8,3 +8,13 @@ export const addItem = (item) => ({
   type: CART_TYPE.addItem,
   payload: item,
 });
+
+export const decreaseItem = (item) => ({
+  type: CART_TYPE.decreaseItem,
+  payload: item,
+});
+
+export const clearItemFromCart = (item) => ({
+  type: CART_TYPE.clearItemFromCart,
+  payload: item,
+});
