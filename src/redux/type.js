@@ -1,2 +1,5 @@
-export const userType = "SET_CURRENT_USER";
-export const cartType = "TOGGLE_CART";
+export const USER_TYPE = "SET_CURRENT_USER";
+export const CART_TYPE = {
+  toggleCart: "TOGGLE_CART",
+  addItem: "ADD_ITEM",
+};
