@@ -37,6 +37,20 @@
       display: flex;
       justify-content: center;
       transition: all 0.5s ease-in-out;
+
+      @media screen and (max-width: 600px) {
+        position: absolute;
+        top: 100px;
+        min-width: 20%;
+        display: flex;
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+        line-height: normal;
+        height: 60px;
+        font-size: 14px;
+        letter-spacing: normal;
+        font-weight: normal;
+      }
     }
   }
 
