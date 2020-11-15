@@ -22,8 +22,15 @@
   .price {
     padding-right: 2px;
     width: 23%;
-  }
 
+    @media screen and (max-width: 400px) {
+      margin-left: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-left: 10px;
+    }
+  }
   .quantity {
     display: flex;
 

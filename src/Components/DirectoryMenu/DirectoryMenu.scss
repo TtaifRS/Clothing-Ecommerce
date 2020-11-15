@@ -3,10 +3,4 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
-  @media screen and (max-width: 640px) {
-    display: inline;
-    height: 240px;
-    margin: auto;
-  }
 }

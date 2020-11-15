@@ -15,6 +15,14 @@
   border-radius: 30px;
   cursor: pointer;
 
+  @media screen and (max-width: 400px) {
+    min-width: 120px;
+  }
+
+  @media screen and (max-width: 600px) {
+    min-width: 120px;
+  }
+
   &:hover {
     background-color: white;
     color: black;
@@ -27,12 +35,11 @@
   &.google-sign-in {
     background-color: #3b01a3;
     color: white;
-    border: 1px solid black;
 
     &:hover {
       background-color: white;
       color: #3b01a3;
-      border: none;
+      border: 1px solid black;
     }
   }
 

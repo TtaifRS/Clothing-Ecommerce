@@ -12,6 +12,7 @@ import Header from "./Components/Header";
 import { auth, createUserProfileDocument } from "./utils/firebase";
 import { setCurrentUser } from "./redux/user/userAction";
 import { selectCurrentUser } from "./redux/user/userSelector";
+import { GlobalStyle } from "./globalStyle";
 
 class App extends React.Component {
   unSubscriberFromAuth = null;
@@ -44,6 +45,7 @@ class App extends React.Component {
   render() {
     return (
       <>
+        <GlobalStyle />
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
